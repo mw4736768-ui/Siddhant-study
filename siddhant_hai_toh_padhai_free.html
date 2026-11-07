@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siddhant Hai Toh Padhai Free</title>
+<style>
+:root{--blue:#1769e0;--navy:#102b55;--light:#eef5ff;--ink:#17243a;--muted:#64748b;--white:#fff;--green:#138a55}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f8fd;color:var(--ink)}
+header{background:linear-gradient(120deg,#0d4db3,#2384f4);color:white;padding:22px 5%;border-radius:0 0 24px 24px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.brand{font-size:clamp(17px,3.5vw,23px);font-weight:800}.tag{font-size:12px;background:#ffffff25;padding:7px 11px;border-radius:20px}
+header h1{font-size:clamp(25px,5vw,38px);margin:25px 0 8px}header p{margin:0;max-width:650px;line-height:1.5;color:#e6f1ff}
+main{max-width:1100px;margin:auto;padding:20px 16px 90px}.section{margin:26px 0}.section h2{font-size:22px;margin:0 0 14px}.muted{color:var(--muted);font-size:14px;line-height:1.5}
+.search{width:100%;padding:14px;border:1px solid #d8e2f0;border-radius:13px;font-size:16px;margin:18px 0;background:white}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:12px}
+.card{background:white;border:1px solid #e3eaf4;border-radius:16px;padding:16px;box-shadow:0 5px 18px #17365d0b}
+.card h3{margin:7px 0;font-size:16px}.card p{font-size:13px;color:var(--muted);line-height:1.45}
+.icon{font-size:25px}.btn{display:inline-block;border:0;background:var(--blue);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;font-size:13px;cursor:pointer}
+.btn.secondary{background:#e8f1ff;color:#1556b0}.btn.green{background:var(--green)}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.quizbox{background:white;border-radius:18px;border:1px solid #dce7f5;padding:18px;box-shadow:0 8px 25px #15345b0d}
+.quizhead{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:13px;margin-bottom:12px}
+.question{font-size:18px;font-weight:700;margin:14px 0}
+.option{display:block;width:100%;text-align:left;background:#f6f9ff;border:1px solid #dce7f5;padding:12px;border-radius:11px;margin:8px 0;cursor:pointer;color:var(--ink);font-size:15px}
+.option.selected{border:2px solid var(--blue);background:#eaf2ff}
+.option:disabled{cursor:default;opacity:1}
+.result{padding:14px;border-radius:12px;background:#eaf8f0;margin-top:14px}
+footer{text-align:center;color:var(--muted);padding:25px;font-size:12px}
+nav{position:fixed;bottom:0;left:0;right:0;background:white;border-top:1px solid #e1e8f2;display:flex;justify-content:space-around;padding:10px 4px;z-index:5}
+nav a{font-size:12px;color:#31547e;text-decoration:none;font-weight:700}
+.hidden{display:none!important}
+</style>
+</head>
+<body>
+<header>
+ <div class="top"><div class="brand">📘 SIDDHANT HAI TOH PADHAI FREE</div><span class="tag">Learn • Practise • Improve</span></div>
+ <h1>Your learning starts here!</h1>
+ <p>Explore free study resources, entrance-exam preparation and daily practice quizzes — all in one simple place.</p>
+</header>
+<main>
+ <input class="search" id="search" placeholder="Search batches, subjects or exams..." oninput="filterCards()">
+ <section class="section" id="batches">
+  <h2>📚 Study batches</h2><p class="muted">Choose a class or exam category. These cards open free public learning resources.</p>
+  <div class="grid" id="batchGrid">
+   <article class="card batch" data-key="class 6"><div class="icon">📗</div><h3>Class 6</h3><p>Maths, Science, English and more.</p><a class="btn" target="_blank" href="https://www.youtube.com/results?search_query=class+6+free+lessons">Explore free lessons</a></article>
+   <article class="card batch" data-key="class 7"><div class="icon">📘</div><h3>Class 7</h3><p>School subjects and chapter revision.</p><a class="btn" target="_blank" href="https://www.youtube.com/results?search_query=class+7+free+lessons">Explore free lessons</a></article>
+   <article class="card batch" data-key="class 8"><div class="icon">📙</div><h3>Class 8</h3><p>Maths, Science, SST and English.</p><a class="btn" target="_blank" href="https://www.youtube.com/results?search_query=class+8+free+lessons">Explore free lessons</a></article>
+   <article class="card batch" data-key="class 9"><div class="icon">🎓</div><h3>Class 9</h3><p>NCERT concepts and exam preparation.</p><a class="btn" target="_blank" href="https://www.youtube.com/results?search_query=class+9+free+lessons">Explore free lessons</a></article>
+   <article class="card batch" data-key="class 10"><div class="icon">🏅</div><h3>Class 10</h3><p>Board preparation and revision.</p><a class="btn" target="_blank" href="https://www.youtube.com/results?search_query=class+10+free+lessons">Explore free lessons</a></article>
+   <article class="card batch" data-key="class 11"><div class="icon">📖</div><h3>Class 11</h3><p>Science, Commerce and Humanities.</p><a class="btn" target="_blank" href="https://www.youtube.com/results?search_query=class+11+free+lessons">Explore free lessons</a></article>
+   <article class="card batch" data-key="class 12"><div class="icon">🎯</div><h3>Class 12</h3><p>Board subjects and concept revision.</p><a class="btn" target="_blank" href="https://www.youtube.com/results?search_query=class+12+free+lessons">Explore free lessons</a></article>
+   <article class="card batch" data-key="jnv class 9"><div class="icon">🏫</div><h3>JNV Class 9</h3><p>Entrance exam practice and mock tests.</p><a class="btn" target="_blank" href="https://www.youtube.com/results?search_query=JNVST+class+9+entrance+preparation">Explore free lessons</a></article>
+   <article class="card batch" data-key="neet"><div class="icon">🧬</div><h3>NEET</h3><p>Free Biology, Physics and Chemistry lessons.</p><a class="btn" target="_blank" href="https://www.youtube.com/results?search_query=NEET+free+lectures">Explore free lessons</a></article>
+   <article class="card batch" data-key="jee"><div class="icon">⚛️</div><h3>JEE</h3><p>Free Maths, Physics and Chemistry lessons.</p><a class="btn" target="_blank" href="https://www.youtube.com/results?search_query=JEE+free+lectures">Explore free lessons</a></article>
+  </div>
+ </section>
+ <section class="section" id="quiz">
+  <h2>⚡ DPP Quiz — Daily Practice Problems</h2>
+  <p class="muted">Try this sample 5-question quiz. Choose one answer for each question. Your score is saved on this device.</p>
+  <div class="quizbox">
+   <div class="quizhead"><span id="progress">Question 1 of 5</span><strong>⏱ <span id="timer">05:00</span></strong></div>
+   <div id="quizArea">
+    <div class="question" id="question"></div><div id="options"></div>
+    <div class="row" style="margin-top:14px"><button class="btn" id="nextBtn" onclick="nextQuestion()">Next question</button><button class="btn secondary" onclick="restartQuiz()">Restart</button></div>
+   </div>
+   <div id="quizResult" class="hidden"></div>
+  </div>
+ </section>
+ <section class="section" id="resources">
+  <h2>🔗 Free learning resources</h2>
+  <div class="grid">
+   <div class="card"><div class="icon">📚</div><h3>NCERT textbooks</h3><p>Official textbooks for school classes.</p><a class="btn secondary" target="_blank" href="https://ncert.nic.in/textbook.php">Open NCERT</a></div>
+   <div class="card"><div class="icon">🌐</div><h3>DIKSHA</h3><p>Government learning content and courses.</p><a class="btn secondary" target="_blank" href="https://diksha.gov.in/">Open DIKSHA</a></div>
+   <div class="card"><div class="icon">📝</div><h3>ePathshala</h3><p>Digital books and study materials.</p><a class="btn secondary" target="_blank" href="https://epathshala.nic.in/">Open ePathshala</a></div>
+  </div>
+ </section>
+ <section class="section" id="dashboard">
+  <h2>📊 My practice dashboard</h2>
+  <div class="grid">
+   <div class="card"><p class="muted">Quizzes completed</p><h2 id="completed">0</h2></div>
+   <div class="card"><p class="muted">Best score</p><h2 id="best">0/5</h2></div>
+   <div class="card"><p class="muted">Last score</p><h2 id="last">—</h2></div>
+  </div>
+  <p class="muted">Your quiz progress is stored only in this browser on this device.</p>
+ </section>
+ <p class="muted">This is an independent study website. It does not provide or unlock paid batches, private course videos or official account access.</p>
+</main>
+<nav><a href="#batches">📚 Batches</a><a href="#quiz">⚡ DPP Quiz</a><a href="#resources">🔗 Resources</a><a href="#dashboard">📊 Progress</a></nav>
+<footer>SIDDHANT HAI TOH PADHAI FREE • Learn at your own pace</footer>
+<script>
+const questions=[
+ {q:"What is the value of 7 × 8?",o:["54","56","64","48"],a:1,why:"7 × 8 = 56."},
+ {q:"Which planet is known as the Red Planet?",o:["Venus","Jupiter","Mars","Mercury"],a:2,why:"Mars looks reddish because of iron oxide on its surface."},
+ {q:"What is the square root of 144?",o:["10","11","12","14"],a:2,why:"12 × 12 = 144."},
+ {q:"Which gas do plants mainly absorb during photosynthesis?",o:["Oxygen","Carbon dioxide","Nitrogen","Hydrogen"],a:1,why:"Plants absorb carbon dioxide to make food."},
+ {q:"Choose the correct comparative form of 'good'.",o:["Gooder","More good","Best","Better"],a:3,why:"The comparative form of good is better."}
+];
+let index=0,answers=[],seconds=300,clock=null,finished=false;
+function draw(){document.getElementById('progress').textContent=`Question ${index+1} of ${questions.length}`;document.getElementById('question').textContent=questions[index].q;document.getElementById('options').innerHTML='';
+ questions[index].o.forEach((v,i)=>{let b=document.createElement('button');b.className='option'+(answers[index]===i?' selected':'');b.textContent=String.fromCharCode(65+i)+'. '+v;b.onclick=()=>{answers[index]=i;draw()};document.getElementById('options').appendChild(b)});
+ document.getElementById('nextBtn').textContent=index===questions.length-1?'Submit quiz':'Next question';
+}
+function startClock(){if(clock)return;clock=setInterval(()=>{seconds--;let m=String(Math.floor(seconds/60)).padStart(2,'0'),s=String(seconds%60).padStart(2,'0');document.getElementById('timer').textContent=m+':'+s;if(seconds<=0){clearInterval(clock);clock=null;finish()}},1000)}
+function nextQuestion(){if(answers[index]===undefined){alert('Please choose an answer first.');return}if(index<questions.length-1){index++;draw()}else finish()}
+function finish(){if(finished)return;finished=true;if(clock){clearInterval(clock);clock=null}let score=0;questions.forEach((q,i)=>{if(answers[i]===q.a)score++});document.getElementById('quizArea').classList.add('hidden');let r=document.getElementById('quizResult');r.classList.remove('hidden');r.innerHTML=`<div class="result"><h2>Your score: ${score}/${questions.length}</h2><p>${score>=4?'Excellent work! Keep practising.':score>=2?'Good effort. Review the explanations and try again.':'Keep learning — practice makes progress!'}</p></div>`+questions.map((q,i)=>`<p><b>${i+1}. ${q.q}</b><br>Your answer: ${answers[i]===undefined?'Not answered':q.o[answers[i]]}<br>Correct answer: <b>${q.o[q.a]}</b><br><span class="muted">${q.why}</span></p>`).join('')+`<button class="btn" onclick="restartQuiz()">Try again</button>`;
+ let data=JSON.parse(localStorage.getItem('studyHubStats')||'{"completed":0,"best":0}');data.completed++;data.best=Math.max(data.best,score);data.last=score;localStorage.setItem('studyHubStats',JSON.stringify(data));updateStats();}
+function restartQuiz(){index=0;answers=[];seconds=300;finished=false;if(clock){clearInterval(clock);clock=null}document.getElementById('timer').textContent='05:00';document.getElementById('quizArea').classList.remove('hidden');document.getElementById('quizResult').classList.add('hidden');draw();startClock()}
+function updateStats(){let d=JSON.parse(localStorage.getItem('studyHubStats')||'{"completed":0,"best":0}');document.getElementById('completed').textContent=d.completed;document.getElementById('best').textContent=(d.best||0)+'/5';document.getElementById('last').textContent=d.last===undefined?'—':d.last+'/5'}
+function filterCards(){let q=document.getElementById('search').value.toLowerCase();document.querySelectorAll('.batch').forEach(c=>c.style.display=c.dataset.key.includes(q)||c.innerText.toLowerCase().includes(q)?'':'none')}
+draw();startClock();updateStats();
+</script>
+</body>
+</html>
